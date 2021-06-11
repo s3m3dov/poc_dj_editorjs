@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+    <h1>Welcome</h1>
+    <div>
+        <p>Proceed to </p>
+        <a href="{% url 'blog:overview' %}" class="btn btn-primary">Blog</a>
+    </div>
+
+{% endblock %}
