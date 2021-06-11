@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_imports %}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock  %}
+
+{% block title %}Blogs{% endblock %}
+
+{% block content %}
+    <main>
+        <h1 class="article-header">{{ article.title }}</h1>
+        <p class="article-about">
+            By {{ article.author }} on {{ article.publish_date|date:"l, j F Y" }}
+        </p>
+        <hr class="divider">
+        <p class="article-content">{{ article.content | safe }}</p>
+    </main>
+{% endblock %}

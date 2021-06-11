@@ -1,9 +1,34 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head_imports %}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock  %}
+
 {% block title %}Blogs{% endblock %}
 
-
 {% block content %}
-    <h1>Welcome to the blog</h1>
+    <main>
+        <h1>Welcome to the blog</h1>
+        <div class="articles">
+            {% for article in articles %}
+            <div  class="article" id="{{ article.title }}">
+                <h2 class="article-header">
+                    <img src="{{ article.image.url }}" class="prod-image" alt="{{ article.title }} {{ article.subtitle }}">
+                    <a href="{% url 'blog:article' article.slug %}">
+                        {{ article.title }}
+                    </a>
+                </h2>
+
+                <p class="article-about">
+                    By {{ article.author }} on {{ article.publish_date|date:"l, j F Y" }}
+                </p>
+                <hr class="divider">
+                <p class="article-summary">
+                    {{ article.meta_description }}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
 {% endblock %}

@@ -1,0 +1,53 @@
+main {
+    padding: 120px 8.3333%;
+}
+h1.article-header {
+    font-size: 23px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    text-transform: capitalize;
+}
+/* Article Posts */
+.article-posts > .article-post {
+    margin-bottom: 35px;
+    padding: 3%;
+    border-radius: 5px;
+}
+p.article-about {
+    font-size: 14px;
+    user-select: none;
+}
+hr.divider {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Tablet - Portrait & Landscape */
+@media screen and (min-width: 768px) {
+    /* General */
+    main {
+        padding: 120px 8.3333%;
+    }
+}
+/* Laptop and Desktop*/
+@media screen and (min-width: 1171px) {
+    /* General */
+    h1.article-header {
+        font-size: 36px;
+        line-height: 48px;
+    }
+    /* Article Div */
+    .article-posts > .article-post {
+        margin-bottom: 50px;
+    }
+    p.article-about {
+        font-size: 20px;
+    }
+    hr.divider {
+        margin-top: 8px;
+        margin-bottom: 20px;
+    }
+}
