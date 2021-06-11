@@ -1,15 +1,13 @@
 # Test: Django & Editor.js Integration #
 
-## Installation & Set-up ##
+## Getting Started ##
 
-### 1st Terminal: Vue Dependencies ###
+### Installation ###
 ```
-cd app_vue
-npm install
-npm run serve
+git clone https://github.com/s3m3dov/dj_editorjs
 ```
 
-### 2nd Terminal: Python/Django Set-up ###
+### Python/Django Set-up ###
 
 ```
 virtualenv .env
