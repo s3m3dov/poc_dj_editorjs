@@ -5,6 +5,9 @@ body, a{
     background-color: #222222;
     color: #f6f6f6;
 }
+main {
+    padding: 120px 8.3333%;
+}
 img {
     width: 300px;
     height: 150px;

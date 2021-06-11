@@ -5,10 +5,12 @@
 
 
 {% block content %}
-    <h1>Welcome</h1>
-    <div>
-        <p>Proceed to </p>
-        <a href="{% url 'blog:overview' %}" class="btn btn-primary">Blog</a>
-    </div>
+    <main>
+        <h1>Welcome</h1>
+        <div>
+            <p>Proceed to </p>
+            <a href="{% url 'blog:overview' %}" class="btn btn-primary">Blog</a>
+        </div>
+    </main>
 
 {% endblock %}
