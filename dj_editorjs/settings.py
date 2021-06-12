@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Installed
+    'django_editorjs_fields',
     # Created
     'apps.core',
     'apps.users',
@@ -78,9 +79,16 @@ WSGI_APPLICATION = 'dj_editorjs.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'testdb1',
+        'USER': 'postgres',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    },
+    'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }

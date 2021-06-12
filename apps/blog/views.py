@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import (
     render,
     get_object_or_404
@@ -17,7 +18,9 @@ def blogOverview(request):
 
 def articleView(request, slug):
     article = get_object_or_404(Article, slug=slug)
+    content = json.dumps(article.content)
     context = {
         'article': article,
+        'content': content
     }
     return render(request, 'article.html', context)

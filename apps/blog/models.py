@@ -1,5 +1,11 @@
 from django.db import models
 from django.utils.text import slugify 
+from django.conf import settings
+
+from django_editorjs_fields import (
+    EditorJsJSONField, 
+    EditorJsTextField
+)
 
 # Create your models here.
 class Article(models.Model):
@@ -12,7 +18,37 @@ class Article(models.Model):
     slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
 
 
-    content = models.TextField() #1,400 - 1,600 words
+    content = EditorJsJSONField(
+        plugins=[
+            "@editorjs/image",
+            "@editorjs/header",
+            "editorjs-github-gist-plugin",
+            "@editorjs/code@2.6.0",  # version allowed :)
+            "@editorjs/list@latest",
+            "@editorjs/inline-code",
+            '@editorjs/embed',
+            '@editorjs/delimiter',
+            '@editorjs/link',
+            '@editorjs/marker',
+            "@editorjs/table",
+        ],
+        tools={
+            "Gist": {
+                "class": "Gist"
+            },
+
+            "Image": {
+                "config": {
+                    "endpoints": {
+                        "byFile": str(settings.MEDIA_ROOT),
+                        "byUrl": str(settings.MEDIA_URL),
+                    }
+                }
+            }
+        },
+        null = True,
+        blank = True,
+    )   #1,400 - 1,600 words
     meta_description = models.CharField(max_length=120, blank=True) # 120, 158, 168
 
     date_created = models.DateTimeField(auto_now_add=True)
