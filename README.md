@@ -43,7 +43,7 @@ python manage.py runserver
 
 ### After Set-up ###
 1. Login to Django admin
-2. Create `Article`on `http://127.0.0.1:8000/admin/blog/article/`
+2. Create `Article` on `http://127.0.0.1:8000/admin/blog/article/`
 3. Go to `http://127.0.0.1:8000/blog/`
 
 ## Who do I talk to? ##
