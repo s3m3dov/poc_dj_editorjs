@@ -7,6 +7,10 @@
 git clone https://github.com/s3m3dov/dj_editorjs
 ```
 
+### Before Set-up ###
+1. Create PostgreSQL db (because sqlite doesn't support JSONfield)
+2. Edit `Databases` settings in 'dj_editorjs/settings.py'
+
 ### Python/Django Set-up ###
 
 ```
