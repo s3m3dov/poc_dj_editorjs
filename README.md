@@ -4,7 +4,7 @@
 
 ### Installation ###
 ```
-git clone https://github.com/s3m3dov/dj_editorjs
+git clone https://github.com/s3m3dov/poc-dj-editorjs
 ```
 
 ### Before Set-up ###
